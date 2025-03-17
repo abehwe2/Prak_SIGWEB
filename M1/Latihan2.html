@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px; /* Limit max width */
+            margin: auto; /* Center the container */
+            height: 500px; /* Set height to make it uniform */
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+
+        .content {
+            width: 80%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%; /* Make content match container height */
+        }
+
+        .content img {
+            width: 350px;
+            height: auto;
+            float: right;
+            margin-left: 15px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 10px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>City Gallery</h1>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h2>Berlin</h2>
+            <p>Berlin is the capital and largest city of Germany, by both area and population. With 3.66 million inhabitants</p>
+            <p>The city is also one of the states of Germany, being the third smallest state in the country by area. </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg/800px-Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg" alt="Berlin">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright @ (nama anda)</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilangan Fibonacci</title>
+    <script>
+        function generateFibonacci(limit) {
+            let fibonacci = [1, 1]; // Bilangan Fibonacci dimulai dari 1, 1
+            let next = 2;
+
+            while (next <= limit) {
+                fibonacci.push(next);
+                next = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
+            }
+
+            return fibonacci.filter(num => num <= limit);
+        }
+
+        function findFibonacci() {
+            let num = parseInt(document.getElementById("number").value);
+            let result = document.getElementById("result");
+
+            if (isNaN(num) || num < 1) {
+                result.innerHTML = "Masukkan angka lebih besar dari 0!";
+                return;
+            }
+
+            let fibonacciSeries = generateFibonacci(num);
+            result.innerHTML = "Bilangan Fibonacci hingga " + num + ": " + fibonacciSeries.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Bilangan Fibonacci</h1>
+    <p>Masukkan sebuah angka, lalu klik tombol untuk melihat bilangan Fibonacci hingga angka tersebut:</p>
+    
+    <input type="number" id="number">
+    <button onclick="findFibonacci()">Hitung</button>
+    
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Input</title>
+    <script>
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            
+            if (password !== "sss") {
+                alert("password salah");
+            } else {
+                alert("password benar");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Validasi Input</h1>
+    <p>Masukkan nama, password dan alamat email anda :</p>
+    
+    <label for="name">Nama :</label>
+    <input type="text" id="name"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email"><br><br>
+
+    <button onclick="validatePassword()">Login</button>
+</body>
+</html>
