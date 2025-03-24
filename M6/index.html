@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Web Map</title> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <style> 
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style> 
+</head> 
+<body>
+    <div id="map"></div>
+    <script> 
+        // Initialize the map
+        var map = L.map('map',{ center: [-7.79558, 110.36949], zoom: 12 });
+        var marker = L.marker([-7.7639847, 110.3704093]).bindPopup('Teknik Geodesi UGM').addTo(map);
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        // Define coordinates
+        var startPoint = L.latLng(-7.7882, 110.4318); // Adisutjipto Airport
+        var endPoint = L.latLng(-7.7706, 110.3775);   // UGM
+
+        // Add routing control to follow roads
+        L.Routing.control({
+            waypoints: [
+                startPoint,
+                endPoint
+            ],
+            routeWhileDragging: true,
+            createMarker: function(i, waypoint, n) {
+                return L.marker(waypoint.latLng).bindPopup(i === 0 ? "Adisutjipto International Airport (JOG)" : "Universitas Gadjah Mada (UGM)");
+            }
+        }).addTo(map);
+        map.on('click', function(e) {
+            var clickedLatLng = e.latlng;
+            L.marker(clickedLatLng).addTo(map)
+                .bindPopup("Custom Marker at " + clickedLatLng.toString()).openPopup();
+        });
+        var airportIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // Airport icon
+            iconSize: [50, 50],
+            iconAnchor: [25, 50],
+            popupAnchor: [-3, -46],
+            shadowUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Marker_shadow.png', // Example shadow
+            shadowSize: [60, 50],
+            shadowAnchor: [25, 50]
+        });
+
+        var universityIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/2775/2775990.png', // University icon
+            iconSize: [50, 50],
+            iconAnchor: [25, 50],
+            popupAnchor: [-3, -46],
+            shadowUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Marker_shadow.png', // Example shadow
+            shadowSize: [60, 50],
+            shadowAnchor: [25, 50]
+        });
+
+        // Add markers with custom icons and shadows
+        L.marker([-7.7882, 110.4318], { icon: airportIcon }).addTo(map)
+            .bindPopup("<b>Adisutjipto International Airport (JOG)</b>");
+
+        L.marker([-7.7706, 110.3775], { icon: universityIcon }).addTo(map)
+            .bindPopup("<b>Universitas Gadjah Mada (UGM)</b>");
+    </script> 
+</body> 
+</html>
