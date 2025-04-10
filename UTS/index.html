@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS</title>
+    <!-- Tambahkan tautan ke Bootstrap CSS dan Leaflet jS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+    <!-- Leaflet Control Geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+   
+
+    <style>
+        html,
+        body,
+        section {
+          position: relative;
+          height: 100%;
+          background-image: url("");
+        }
+  
+        html {
+          scroll-behavior: smooth;
+        }
+  
+        h1 {
+        }
+  
+        #map {
+          width: 750px;
+          height: 500px;
+          margin-top: 30px;
+        }
+      </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c08261">
+      <a class="navbar-brand" href="#"></a>
+      <img src="https://englishcafejogja.net/wp-content/uploads/2017/12/logo-ugm.gif" alt="Bootstrap" width="30" height="30" />
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class="custom-container">
+      <h1 style="text-align: center;">UJIAN TENGAH SEMESTER PRAKTIKUM SIG WEB</h1>
+      <br />
+      <h2>Ringkasan Mengenai SIG WEB</h2>
+      <p style="text-align: justify;">
+        Mata Kuliah Praktikum Sistem Informasi Geografi Berbasis web merupakan mata kuliah yang mempelajari menggabungkan peta dengan web interaktif. SIG Web merupakan salah satu bentuk untuk menampilkan peta dalam website agar banyak pengguna dapat mengakses. Dalam SIG Web dapat mengumpulkan, mengelola, menganalisis, dan memvisualisasikan data spasial melalui web yang telah dibuat.Berikut berisi kegiatan praktikum mulai dari minggu 1 sampai dengan minggu 7.
+      </p>
+      <br />
+      <h3>Minggu ke-1 - HTML, CSS, dan WIX</h3>
+      <p style="text-align: justify;"><b>HTML adalah</b>  bahasa markup yang digunakan untuk membuat struktur dasar dari sebuah halaman web. HTML digunakan untuk menentukan elemen-elemen pada halaman web seperti teks, gambar, link, dan sebagainya.
+        </p>
+        <p style="text-align: justify;"><b>CSS adalah</b>  bahasa yang digunakan untuk mengatur tampilan dan styling elemen-elemen yang telah ditentukan dalam HTML. Dengan CSS,  pengembang web memungkinkan untuk mengontrol warna, font, ukuran, dan elemen desain lainnya pada halaman web.
+            CSS membuat perubahan dalam tampilan halaman web menjadi lebih fleksibel dan mudah dikelola, karena pengguna dapat mengubah styling secara terpusat tanpa harus mengedit setiap elemen di halaman tersebut.</p>
+        <p style="text-align: justify;">
+           <b>Wix adalah</b>  sebuah platform pembuatan web yang membantu pengguna untuk membuat situs web sendiri tanpa harus memiliki pengetahuan mendalam tentang pemrograman atau desain web.
+        </p>
+        <p style="text-align: justify;">Pada pelaksanaan praktikum materi ini, dilakukan dengan membuat sebuah WEB dengan HTML dan CSS sederhana. Selain itu, dilakukan pembuatan <i>Curiculum Vitae (CV)</i> dengan menggunakan website WIX. </p>
+      <br />
+      <h3>Minggu ke-2 - JavaScript</h3>
+      <p>
+        <b style="text-align: justify;">JavaScript adalah</b> bahasa pemrograman yang digunakan untuk mengembangkan situs web interaktif dan dinamis. Javascript merupakan salah satu bahasa pemrograman yang paling umum digunakan di seluruh dunia untuk pengembangan web. 
+        JavaScript memiliki peran penting dalam menjadikan halaman web lebih responsif, berfungsi, dan interaktif. 
+      </p>
+      <p style="text-align: justify;">
+        Pada praktikum yang telah dilakukan, dilakukan pembuatan script menggunakan java script untuk menjawab lima soal yang telah diberikan.
+      </p>
+      <br />
+      <h3>Minggu ke-3 & ke-5 - Bootstrap Framework</h3>
+      <p>
+        <b style="text-align: justify;">Bootstrap adalah</b> sebuah framework front-end sumber terbuka yang digunakan untuk memudahkan pengembangan situs web dan aplikasi web responsif (responsive web) yang menarik dan berfungsi dengan baik. 
+        Framework ini dibuat dengan bahasa markup CSS yang membantu pengguna dalam pembuatan web. 
+        Bootstrap menyediakan serangkaian alat, gaya, dan komponen yang siap pakai untuk mempercepat proses pengembangan web. 
+      </p>
+      <p style="text-align: justify;">Pada praktikum yang telah dilakukan, pertama mengenal framework bootstrap yang akan digunakan. Lalu menggunakan Bootstrap dalam pembuatan CV yang berisi biodata pribadi pemilik web serta link tugas yang telah dikerjakan selama praktikum SIG WEB  </p>
+      <br />
+      <h3>Minggu ke-6 - Leaflet JS beserta Pluginnya</h3>
+      <p style="text-align: justify;">
+        <b>Leaflet JS</b> adalah sebuah perpustakaan JavaScript open-source yang digunakan untuk membuat peta interaktif di situs web. Leaflet dirancang untuk menjadi ringan, cepat, mudah digunakan, dan memiliki fokus pada responsif dan kustomisasi. 
+        Leaflet merupakan salah satu perpustakaan peta yang paling populer di antara pengembang web dan digunakan secara luas dalam proyek-proyek yang memerlukan integrasi peta interaktif. 
+      </p>
+      <p style="text-align: justify;">Pada praktikum, telah dilakukan pembuatan peta interaktif menggunakan Leaflet JS dengan menambahkan beberapa plugin seperti plugin <i>geolocating</i> dan <i>routing</i></p>
+      <br />
+      <h3>Minggu ke-7 - Leaflet JS dengan GeoJSON</h3>
+     </p>
+        <p style="text-align: justify;">Pada pelaksanaan praktikum materi ini, melanjutkan pembuatan peta dengan Leaflet JS dengan menambahkan shapefile. Shapefile yang dibuat dalam QGIS atau ArcGIS akan di save dalam bentuk GeoJSON. File GeoJSON akan dimasukkan dalam script yang nanti akan muncul dalam peta interaktif yang telah dibuat.</p>
+    </div>
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; /* Untuk mengatur kontainer ke tengah */
+        }
+        </style>
+    <br />
+    <br />
+    <br />
+
+    <!--Link Geodesi-->
+    <div class="custom-container">
+        <div class="section-title">
+          <h2>Tempat Pendidikan</h2>
+        </div>
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; /* Untuk mengatur kontainer ke tengah */
+        }
+        </style>
+    <div class="row justify-content-center m-2">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://ugm.ac.id/wp-content/uploads/2022/11/LOGO-UGM-BAKU-tnp-back-grou-300x300.jpg" class="card-img-top border border-5 border-warning custom-size-50" alt="foto1" />
+            <div class="card-body">
+              <a href="https://geodesi.ugm.ac.id/" class="card-link">Departemen Teknik Geodesi</a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+            <br />
+            <br />
+            <br />
+        </div>
+
+       
+
+    <!--Membuat Table yang berisi nama dan Nim-->
+    <div class="custom-container">
+        <div class="section-title">
+          <h2>Data Diri</h2>
+        </div>
+    </div>
+    <div class="custom-container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" class="align-middle text-center" style="background-color: #e9d2c6">NAMA</th>
+                    <th scope="col"class="align-middle text-center" style="background-color: #e9d2c6">NIM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle text-center" style="color: #ed0d0d">Abisatya Wicaksana</td>
+                    <td class="align-middle text-center" style="color: #0003c7">21/482013/TK/53207</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; /* Untuk mengatur kontainer ke tengah */
+        }
+        </style>
+
+
+    <!--Membuat formulir validasi pekerjaan-->
+    <div class="custom-container">
+        <h2>Validasi Pekerjaan Selesai</h2>
+        <p>Harap isikan password dibawah untuk menvalidasi pekerjaan anda telah selesai!</p>
+        <form id="jobForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password">
+                <small class="text-danger" id="errorText"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; /* Untuk mengatur kontainer ke tengah */
+        }
+        </style>
+    
+    <script>
+    function validateForm() {
+        var password = document.getElementById('password').value;
+    
+        if (password === 'Selesai') {
+            return true; // Lanjutkan proses
+        } else {
+            document.getElementById('errorText').textContent = 'Password tidak benar. Harap masukkan pasword yang benar!';
+            return false; // Hentikan pengiriman formulir
+        }
+    }
+    </script>
+
+    <!--Membuat peta yang menunjuuan 5 fakultas di UGM-->
+    <div class="custom-container">
+        <div class="section-title">
+          <h2>Peta 5 Fakultas di UGM</h2>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <center>
+            <div id="map"></div>
+        </center>
+        <script>
+            var bgnIcon = L.icon({
+              iconUrl: "https://cdn-icons-png.flaticon.com/512/2775/2775990.png",
+              iconSize: [50, 50],
+              iconAnchor: [20, 50],
+              popupAnchor: [0, 0],
+            });
+      
+              var teknik = L.marker([-7.7651150963147115, 110.37252242477578], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://ugm.ac.id/wp-content/uploads/2022/11/fak-teknik2-825x464.jpg" width="300px" height="200px" title="Fakultas Teknik" alt="Teknik"></center><h3>Fakultas Teknik</h3><p>Fakultas Teknik UGM merupakan salah satu fakutlas terbesar di UGM.</p><a href="https://maps.app.goo.gl/rJcnwNvSyg4vH2wx7">Link Lokasi</a>'
+              ),
+              
+              Kedokteran = L.marker([-7.769341264209354, 110.37399720068439], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://ugm.ac.id/wp-content/uploads/2022/11/fak-kedokteran-masayarakat-270x182.jpg" width="300px" height="200px" title="Fakultas Kedokteran" alt="FKKMK"></center><h3>Fakultas Kedokteran</h3><p>FKKMK mempunyai lokasi yang strategis karena dekat dengan RS Sardjito.</p><a href="https://maps.app.goo.gl/E9ZDmVFTx3fgkjWz9">Link Lokasi</a>'
+              ),
+              Ekonomi = L.marker([-7.77049893497029, 110.37894514290274], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://ugm.ac.id/wp-content/uploads/2022/11/DSC00118-HDR.jpg" width="300px" height="200px" title="Fakultas Ekonomi dan Bisnis" alt="FEB"></center><h3>Fakultas Ekonomi dan Bisnis</h3><p>Fakultas Ekonom merupakan salah satu fakultas yang telah menjalani program IUP dengna cukup lama </p><a href="https://maps.app.goo.gl/nVVReCfBZumsnhnJ9">Link Lokasi</a>'
+              ),
+              Hukum = L.marker([-7.770448887337254, 110.38118368292474], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://law.ugm.ac.id/wp-content/uploads/sites/9/2024/10/DSC0560-1024x576.jpg" width="300px" height="200px" title="Fakultas Hukum" alt="Hukum"></center><h3>Fakultas Hukum</h3><p>Fakultas Hukum merupakan salah satu fakultas di UGM</p><a href="https://maps.app.goo.gl/DtzzRVS9D6Mv3UTr8">Link Lokasi</a>'
+              ),
+              Geo= L.marker([-7.766099062426001, 110.37759409670565], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAgU9dmvrY_Dmk4hbEhS_C5ksNrfZFj9p2Ow&s" width="300px" height="200px" title="Fakultas Geografi" alt="Geografi"></center><h3>Fakultas Geografi</h3><p>Fakultas Geografi satu area dengan FMIPA dan FKKMIK</p><a href="https://maps.app.goo.gl/6aemTgQ8VCZGiTDz8">Link Lokasi</a>'
+              );
+      
+            var bgn = L.layerGroup([teknik, Kedokteran, Ekonomi, Hukum, Geo]);
+      
+            var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+              maxZoom: 20,
+              attribution: "© OpenStreetMap",
+            });
+      
+            var osm2 = L.tileLayer("https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {
+              maxZoom: 20,
+              attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+            });
+      
+            var map = L.map("map", {
+              measureControl: true,
+              center: [-7.768987754140878, 110.37637171609568],
+              zoom: 16,
+              layers: [osm, bgn],
+            });
+      
+      
+            var baseMaps = {
+              Peta: osm,
+              Satelit: osm2,
+            };
+      
+            var overlayMaps = {
+              Fakultas: bgn,
+            };
+      
+            var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+            var baseMaps = {
+              OpenStreetMap: osm,
+              "<span style='color: red'>OpenStreetMap.maps</span>": osm2,
+            };
+      
+            L.easyPrint({
+              title: "My awesome print button",
+              position: "topright",
+              sizeModes: ["A4Portrait", "A4Landscape"],
+            }).addTo(map);
+      
+            var graphicScale = L.control
+              .graphicScale({
+                fill: "fill",
+                doubleLine: "true",
+                showSubunits: "true",
+              })
+              .addTo(map);
+      
+          
+           
+      
+            L.Control.geocoder().addTo(map);
+          </script>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <!--  Tautan ke Bootstrap JS dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
